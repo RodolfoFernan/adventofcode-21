@@ -31,9 +31,8 @@ func main() {
 	}
 
 	fmt.Println("Part 1: Depth: " + fmt.Sprint(depth) + " Horizontal: " + fmt.Sprint(horizontal) + " Multiplied: " + fmt.Sprint(horizontal*depth))
-
-	depth = 0
-	horizontal = 0
+    depth = 0
+   horizontal = 0
 	aim := 0
 
 	for i := 0; i < len(instructionArray); i++ {
@@ -60,7 +59,8 @@ func readLines(path string) ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer func(file *os.File) {
+     defer func(file *os.File) {
+
 		err := file.Close()
 		if err != nil {
 			panic(err)
